@@ -7,14 +7,14 @@
   width: 200px;
   height: auto;
   margin-left: auto;
-  margin-right: auto; /* Push the logo to the left */
+  margin-right: auto; 
   background-color: transparent;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between; /* Distribute space between logo and links */
-  align-items: center;       /* Vertically center logo and links */
+  justify-content: space-between; 
+  align-items: center;       
   padding: 5px;
   position: fixed;
   overflow: hidden;
@@ -24,12 +24,12 @@
 
 .navbar-nav {
   display: flex;
-  flex-grow: 1; /* This ensures the nav links take up available space */
-  justify-content: flex-end; /* This aligns the nav links to the right */
+  flex-grow: 1; 
+  justify-content: flex-end; 
 }
 
 .nav-link {
-  color: #ffffff; /* White text color for links */
+  color: #ffffff;
   margin: 0 10px;
 }
 

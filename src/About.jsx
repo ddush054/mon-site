@@ -3,15 +3,15 @@ import ChatBot from "react-simple-chatbot";
 import "./About.css";
 import Navbar from "./Navbar";
 
-const containerStyle = {
-  width: "100%",
-  height: "400px",
-};
+// const containerStyle = {
+//   width: "100%",
+//   height: "400px",
+// };
 
-const center = {
-  lat: 45.4215,
-  lng: -75.6972,
-};
+// const center = {
+//   lat: 45.4215,
+//   lng: -75.6972,
+// };
 
 const About = () => {
   const steps = [
@@ -77,6 +77,7 @@ const About = () => {
         <div className="map-selection">
           <div className="gmap-frame">
             <iframe
+              title="map"
               width="100%"
               height="400"
               frameborder="0"

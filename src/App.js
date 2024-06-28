@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import ChatBot from "react-simple-chatbot";
-import "./App.css"; // Add your custom CSS here if needed
+import "./App.css";
 import Navbar from "./Navbar";
 
 const App = () => {
@@ -146,29 +146,35 @@ const App = () => {
         <div class="row">
           <div class="col-md-4">
             <div class="offer-card">
-              <img src="img/house1.png" alt="House 1" class="img-fluid" />
-              <p class="price">
-                <span class="old-price">$1,120,999</span> $1,000,459
-              </p>
-              <p class="location">123X Ville A, ON</p>
+              <a href="/Abooking">
+                <img src="img/house1.png" alt="House 1" class="img-fluid" />
+                <p class="price">
+                  <span class="old-price">$1,120,999</span> $1,000,459
+                </p>
+                <p class="location">123X Ville A, ON</p>
+              </a>
             </div>
           </div>
           <div class="col-md-4">
             <div class="offer-card">
-              <img src="img/house2.png" alt="House 2" class="img-fluid" />
-              <p class="price">
-                <span class="old-price">$920,999</span> $729,900
-              </p>
-              <p class="location">123X Ville B, ON</p>
+              <a href="/Abooking">
+                <img src="img/house2.png" alt="House 2" class="img-fluid" />
+                <p class="price">
+                  <span class="old-price">$920,999</span> $729,900
+                </p>
+                <p class="location">123X Ville B, ON</p>
+              </a>
             </div>
           </div>
           <div class="col-md-4">
             <div class="offer-card">
-              <img src="img/house3.png" alt="House 3" class="img-fluid" />
-              <p class="price">
-                <span class="old-price">$1,560,999</span> $1,100,370
-              </p>
-              <p class="location">123X Ville C, ON</p>
+              <a href="/Abooking">
+                <img src="img/house3.png" alt="House 3" class="img-fluid" />
+                <p class="price">
+                  <span class="old-price">$1,560,999</span> $1,100,370
+                </p>
+                <p class="location">123X Ville C, ON</p>
+              </a>
             </div>
           </div>
         </div>
