@@ -1,0 +1,79 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    padding: 10px;
+    color: white;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+    cursor: pointer;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .description{
+    width: 50%;
+    background-color: #000;
+    height: 700px;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .description h2{
+    text-align: center;
+  }
+  
+  .chart{
+    width: 50%;
+    background-color: #c7c7c7ac;
+    height: auto;
+  }
+  .chart h3 {
+    text-align: center;
+    
+  }
+  .chart img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .chat-bot {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  .hours, .contact {
+    width: 45%;
+    text-align: left;
+  }
+  
+  .hours h4, .contact h4 {
+    margin-bottom: 10px;
+  }
+  

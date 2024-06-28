@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+.container {
+  max-width: 1200px;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo-img {
+  width: 200px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto; /* Push the logo to the left */
+  background-color: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between; /* Distribute space between logo and links */
+  align-items: center;       /* Vertically center logo and links */
+  padding: 5px;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-nav {
+  display: flex;
+  flex-grow: 1; /* This ensures the nav links take up available space */
+  justify-content: flex-end; /* This aligns the nav links to the right */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-link {
+  color: #ffffff; /* White text color for links */
+  margin: 0 10px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+.special-offers {
+  background-color: #f8f9fa;
+  padding: 2rem;
+}
+
+.offer-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.offer-card img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: red;
+  margin-right: 0.5rem;
+}
+
+.location {
+  font-size: 1rem;
+  color: #555;
+}
+
+.chat-bot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
