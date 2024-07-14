@@ -1,0 +1,57 @@
+.App {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .feedback main {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .feedback h1 {
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 150px;
+  }
+  
+  .feedback-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .feedback-card {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 500px;
+    text-align: left;
+  }
+  
+  .feedback-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .feedback-card p {
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .feedback-card h3 {
+    color: #333;
+    margin: 0;
+  }
+  
+  .feedback-card h4 {
+    color: #868686;
+    margin: 0;
+  }
+  

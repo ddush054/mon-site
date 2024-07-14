@@ -1,0 +1,46 @@
+{
+    "navbar":{
+        "PROPRIÉTÉS": "REAL ESTATE",
+        "SOYEZ APPROUVÉS": "BOOK A VISIT",
+        "À PROPOS DE NOUS": "ABOUT US"
+    },
+    "offers":{
+        "LES OFFRES SPÉCIALES":"SPECIAL OFFERS"
+    },
+    "footer":{
+        "HORAIRES D'OUVERTURE":"BUSINESS HOURS :",
+        "LUNDI-SAMEDI":"MONDAY - SATURDAY : 10:00 AM - 6:30 PM",
+        "DIMANCHE":"SUNDAY : CLOSED",
+        "NOUS JOINDRE":"CONTACT US :",
+        "ADRESSE": "Address : 75 Laurier Ave E, Ottawa, ON K1N 6N5",
+        "TÉLÉPHONE": "Phone : (613) 562-5700"
+    },
+    "about":{
+        "Text":"HOMEFINDER, established in 1990, is a dedicated real estate company with a mission to assist first-time homebuyers in finding their ideal homes. With over three decades of experience, we have built a reputation for providing personalized and comprehensive services. Our team works closely with clients to navigate the complexities of the housing market, ensuring a smooth and successful buying process. Additionally, we offer extensive support to real estate agents, helping them connect with potential buyers and grow their businesses."
+    },
+    "booking":{
+        "RÉSERVEZ VOTRE VISITE":"BOOK YOUR VISIT",
+        "AGENT":"Choose a real estate agent",
+        "DATE":"Choose a date",
+        "HEURE":"Choose a time",
+        "FIRSTNAME":"First name",
+        "LASTNAME":"Last name",
+        "EMAIL":"Email",
+        "PHONE":"Phone number",
+        "BOOK":"BOOK NOW"
+    },
+    "properties":{
+        "TROUVER UNE MAISON":"FIND A HOME",
+        "EMPLACEMENT":"City, district, address",
+        "PRIX MIN":"Min Price",
+        "PRIX MAX":"Max Price",
+        "CHAMBRES":"Bedrooms",
+        "BAINS":"Bathrooms",
+        "RECHERCHER":"SEARCH",
+        "RÉINITIALISER":"Clear Filters"
+    },
+    "feedback":{
+        "Text":"Read what our community has to say about this property",
+        "Book":"BOOK YOUR VISIT"
+    }
+}

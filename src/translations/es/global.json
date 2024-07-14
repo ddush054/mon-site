@@ -1,0 +1,46 @@
+{
+    "navbar":{
+        "PROPRIÉTÉS": "INMOBILIARO",
+        "SOYEZ APPROUVÉS": "CONSEGUIR LA APROBACION",
+        "À PROPOS DE NOUS": "QUIENES SOMOS"
+    },
+    "offers":{
+        "LES OFFRES SPÉCIALES":"OFERTAS ESPECIALES"
+    },
+    "footer":{
+        "HORAIRES D'OUVERTURE":"HORARIO COMERCIAL :",
+        "LUNDI-SAMEDI":"LUNES - SÁBADO : 10:00 AM - 6:30 PM",
+        "DIMANCHE":"DOMINGO : CERRADO",
+        "NOUS JOINDRE":"CONTACTO :",
+        "ADRESSE": "Dirección : 75 Laurier Ave E, Ottawa, ON K1N 6N5",
+        "TÉLÉPHONE": "Teléfono : (613) 562-5700"
+    },
+    "about":{
+        "Text":"HOMEFINDER, establecido en 1990, es una empresa inmobiliaria dedicada con la misión de ayudar a los compradores de vivienda por primera vez a encontrar sus hogares ideales. Con más de tres décadas de experiencia, hemos construido una reputación por brindar servicios personalizados y completos. Nuestro equipo trabaja estrechamente con los clientes para navegar las complejidades del mercado de la vivienda, asegurando un proceso de compra fluido y exitoso. Además, ofrecemos un amplio apoyo a los agentes inmobiliarios, ayudándoles a conectarse con compradores potenciales y hacer crecer sus negocios."
+    },
+    "booking":{
+        "RÉSERVEZ VOTRE VISITE":"RESERVE SU VISITA",
+        "AGENT":"Elegir un agente inmobiliario",
+        "DATE":"Choose a date",
+        "HEURE":"Choose a time",
+        "FIRSTNAME":"Nombre",
+        "LASTNAME":"Apellido",
+        "EMAIL":"Correo electrónico",
+        "PHONE":"Número de teléfono",
+        "BOOK":"RESERVE AHORA"
+    },
+    "properties":{
+        "TROUVER UNE MAISON":"ENCONTRAR UN HOGAR",
+        "EMPLACEMENT":"Ciudad, distrito, dirección",
+        "PRIX MIN":"Precio mínimo",
+        "PRIX MAX":"Precio máximo",
+        "CHAMBRES":"Dormitorios",
+        "BAINS":"Baños",
+        "RECHERCHER":"BUSCAR",
+        "RÉINITIALISER":"Limpiar filtros"
+    },
+    "feedback":{
+        "Text":"Lea lo que nuestra comunidad tiene que decir acerca de esta propiedad",
+        "Book":"RESERVE SU VISITA"
+    }
+}

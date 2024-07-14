@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import ChatBot from "react-simple-chatbot";
+import { ThemeProvider } from "styled-components";
 import "./Ainventory.css";
 import Navbar from "./Navbar";
 
@@ -53,71 +55,121 @@ const properties = [
     address: "603X DESMARAIS, F, ON",
     image: "house9.png",
   },
+  {
+    id: 7,
+    price: "$650,299",
+    rooms: "2",
+    baths: "2",
+    address: "603X TURCOT, G, ON",
+    image: "house10.png",
+  },
+  {
+    id: 8,
+    price: "$450,000",
+    rooms: "2",
+    baths: "1",
+    address: "603X MINTO, H, ON",
+    image: "house11.png",
+  },
+  {
+    id: 9,
+    price: "$835,000",
+    rooms: "3",
+    baths: "2",
+    address: "603X MORRISSET, I, ON",
+    image: "house12.png",
+  },
+  {
+    id: 10,
+    price: "$2,050,000",
+    rooms: "6",
+    baths: "4",
+    address: "603X HAMELIN, J, ON",
+    image: "house13.png",
+  },
+];
+
+const steps = [
+  { id: "0", message: "What is your name?", trigger: "1" },
+  { id: "1", user: true, trigger: "2" },
+  { id: "2", message: "Hi {previousValue}, nice to meet you!", trigger: "3" },
+  { id: "3", message: "How can I help you today?", trigger: "4" },
+  {
+    id: "4",
+    options: [
+      { value: 1, label: "I want to buy a house", trigger: "5" },
+      { value: 2, label: "I want to sell a house", trigger: "6" },
+      { value: 3, label: "I want to rent a house", trigger: "7" },
+    ],
+  },
+  {
+    id: "5",
+    message:
+      "Great! I can help you with that. What type of house are you looking for?",
+    trigger: "8",
+  },
+  {
+    id: "6",
+    message:
+      "Great! I can help you with that. What type of house are you selling?",
+    trigger: "8",
+  },
+  {
+    id: "7",
+    message:
+      "Great! I can help you with that. What type of house are you looking to rent?",
+    trigger: "8",
+  },
+  {
+    id: "8",
+    options: [
+      { value: 1, label: "Single Family", trigger: "9" },
+      { value: 2, label: "Multi Family", trigger: "9" },
+      { value: 3, label: "Condo", trigger: "9" },
+      { value: 4, label: "Townhouse", trigger: "9" },
+      { value: 5, label: "Mobile Home", trigger: "9" },
+      { value: 6, label: "Land", trigger: "9" },
+    ],
+  },
+  { id: "9", message: "Great! What is your budget?", trigger: "10" },
+  { id: "10", user: true, trigger: "11" },
+  {
+    id: "11",
+    message: "Great! What is your location preference?",
+    trigger: "12",
+  },
+  { id: "12", user: true, trigger: "13" },
+  {
+    id: "13",
+    message: "Great! I will find some options for you. Please wait a moment.",
+    end: true,
+  },
 ];
 
 function Ainventory() {
+  const [t, i18n] = useTranslation("global");
+
+  const handleChangeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
   const navigate = useNavigate(); // useNavigate hook for navigation
-  const steps = [
-    { id: "1", message: "What is your name?", trigger: "2" },
-    { id: "2", user: true, trigger: "3" },
-    { id: "3", message: "Hi {previousValue}, nice to meet you!", trigger: "4" },
-    { id: "4", message: "How can I help you today?", trigger: "5" },
-    {
-      id: "5",
-      options: [
-        { value: 1, label: "I want to buy a house", trigger: "6" },
-        { value: 2, label: "I want to sell a house", trigger: "7" },
-        { value: 3, label: "I want to rent a house", trigger: "8" },
-      ],
-    },
-    {
-      id: "6",
-      message:
-        "Great! I can help you with that. What type of house are you looking for?",
-      trigger: "9",
-    },
-    {
-      id: "7",
-      message:
-        "Great! I can help you with that. What type of house are you selling?",
-      trigger: "9",
-    },
-    {
-      id: "8",
-      message:
-        "Great! I can help you with that. What type of house are you looking to rent?",
-      trigger: "9",
-    },
-    {
-      id: "9",
-      options: [
-        { value: 1, label: "Single Family", trigger: "10" },
-        { value: 2, label: "Multi Family", trigger: "10" },
-        { value: 3, label: "Condo", trigger: "10" },
-        { value: 4, label: "Townhouse", trigger: "10" },
-        { value: 5, label: "Mobile Home", trigger: "10" },
-        { value: 6, label: "Land", trigger: "10" },
-      ],
-    },
-    { id: "10", message: "Great! What is your budget?", trigger: "11" },
-    { id: "11", user: true, trigger: "12" },
-    {
-      id: "12",
-      message: "Great! What is your location preference?",
-      trigger: "13",
-    },
-    { id: "13", user: true, trigger: "14" },
-    {
-      id: "14",
-      message: "Great! I will find some options for you. Please wait a moment.",
-      end: true,
-    },
-  ];
+  const theme = {
+    background: "#f5f8fb",
+    fontFamily: "Helvetica Neue",
+    headerBgColor: "#c7c7c7ac",
+    headerFontColor: "#fff",
+    headerFontSize: "15px",
+    botBubbleColor: "#c7c7c7ac",
+    botFontColor: "#fff",
+    userBubbleColor: "#fff",
+    userFontColor: "#4a4a4a",
+  };
 
   const [searchTerm, setSearchTerm] = useState("");
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
   const [rooms, setRooms] = useState("");
+  const [baths, setBaths] = useState("");
   const [filteredProperties, setFilteredProperties] = useState(properties);
   const [suggestions, setSuggestions] = useState([]);
 
@@ -144,17 +196,23 @@ function Ainventory() {
     setRooms(event.target.value);
   };
 
+  const handleBaths = (event) => {
+    setBaths(event.target.value);
+  };
+
   const handleSearch = () => {
     const minPriceValue = parseFloat(minPrice.replace(/[$,]/g, ""));
     const maxPriceValue = parseFloat(maxPrice.replace(/[$,]/g, ""));
     const roomsValue = parseFloat(rooms);
+    const bathsValue = parseFloat(baths);
     const results = properties.filter((property) => {
       const propertyPrice = parseFloat(property.price.replace(/[$,]/g, ""));
       return (
         property.address.toLowerCase().includes(searchTerm.toLowerCase()) &&
         (isNaN(minPriceValue) || propertyPrice >= minPriceValue) &&
         (isNaN(maxPriceValue) || propertyPrice <= maxPriceValue) &&
-        (isNaN(roomsValue) || property.rooms === rooms)
+        (isNaN(roomsValue) || property.rooms === rooms) &&
+        (isNaN(bathsValue) || property.baths === baths)
       );
     });
     setFilteredProperties(results);
@@ -168,7 +226,16 @@ function Ainventory() {
   };
 
   const handlePropertyClick = (property) => {
-    navigate("/Abooking", { state: { property } });
+    navigate("/Afeedback", { state: { property } });
+  };
+
+  const handleClearFilters = () => {
+    setSearchTerm("");
+    setMinPrice("");
+    setMaxPrice("");
+    setRooms("");
+    setFilteredProperties(properties);
+    setSuggestions([]);
   };
 
   return (
@@ -177,11 +244,11 @@ function Ainventory() {
       <main>
         <div className="search-bar">
           <header>
-            <strong>TROUVER UNE MAISON</strong>
+            <strong>{t("properties.TROUVER UNE MAISON")}</strong>
           </header>
           <input
             type="text"
-            placeholder="Ville, quartier, adresse"
+            placeholder={t("properties.EMPLACEMENT")}
             value={searchTerm}
             onChange={handleChange}
           />
@@ -199,7 +266,7 @@ function Ainventory() {
           )}
           <div className="filters">
             <select value={minPrice} onChange={handleMinPriceChange}>
-              <option value="">Prix min</option>
+              <option value="">{t("properties.PRIX MIN")}</option>
               <option value="$500,000">$500,000</option>
               <option value="$700,000">$700,000</option>
               <option value="$900,000">$900,000</option>
@@ -207,7 +274,7 @@ function Ainventory() {
               <option value="$2,000,000">$2,000,000</option>
             </select>
             <select value={maxPrice} onChange={handleMaxPriceChange}>
-              <option>Prix max</option>
+              <option>{t("properties.PRIX MAX")}</option>
               <option value="$500,000">$500,000</option>
               <option value="$700,000">$700,000</option>
               <option value="$900,000">$900,000</option>
@@ -215,17 +282,23 @@ function Ainventory() {
               <option value="$2,000,000">$2,000,000</option>
             </select>
             <select value={rooms} onChange={handleRooms}>
-              <option>Chambres</option>
+              <option>{t("properties.CHAMBRES")}</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
               <option value="5">5</option>
               <option value="6">6</option>
             </select>
-            <select>
-              <option>Bains</option>
+            <select value={baths} onChange={handleBaths}>
+              <option>{t("properties.BAINS")}</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
             </select>
-            <button onClick={handleSearch}>Recherche</button>
+            <button onClick={handleSearch}>{t("properties.RECHERCHER")}</button>
+            <button onClick={handleClearFilters}>
+              {t("properties.RÉINITIALISER")}
+            </button>
           </div>
         </div>
         <div className="property-list">
@@ -238,8 +311,12 @@ function Ainventory() {
               <img src={`/img/${property.image}`} alt="house" />
               <div className="property-details">
                 <p className="price">{property.price}</p>
-                <p className="rooms">Chambres: {property.rooms}</p>
-                <p className="baths">Bains: {property.baths}</p>
+                <p className="rooms">
+                  {t("properties.CHAMBRES")}: {property.rooms}
+                </p>
+                <p className="baths">
+                  {t("properties.BAINS")}: {property.baths}
+                </p>
                 <p className="address">{property.address}</p>
               </div>
             </div>
@@ -247,7 +324,14 @@ function Ainventory() {
         </div>
       </main>
       <div className="chatbot">
-        <ChatBot steps={steps} floating={true} botDelay={1000} />
+        <ThemeProvider theme={theme}>
+          <ChatBot
+            steps={steps}
+            floating={true}
+            botDelay={1000}
+            key={new Date()}
+          />
+        </ThemeProvider>
       </div>
     </div>
   );

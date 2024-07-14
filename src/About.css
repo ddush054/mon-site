@@ -1,14 +1,10 @@
-.App {
-    text-align: center;
-  }
-  
-  .App-header {
+  /* .App-header {
     background-color: #282c34;
     padding: 10px;
     color: white;
   }
-  
-  nav ul {
+   */
+  /* nav ul {
     list-style-type: none;
     padding: 0;
   }
@@ -18,7 +14,7 @@
     margin: 0 15px;
     cursor: pointer;
   }
-  
+   */
   .content {
     display: flex;
     justify-content: space-around;
@@ -47,9 +43,9 @@
     text-align: center;
     
   }
-  .chart img {
+  .embed-responsive-item {
     width: 100%;
-    height: auto;
+    height: 600px;
   }
   
   .chat-bot {
@@ -75,5 +71,10 @@
   
   .hours h4, .contact h4 {
     margin-bottom: 10px;
+  }
+  
+  .contact i {
+    margin-right: 8px;
+    color: #000;
   }
   

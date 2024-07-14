@@ -135,3 +135,24 @@
     cursor: pointer;
   }
   
+  .Ainventory .filters button {
+    background-color: #868686;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+  }
+  
+  .Ainventory .filters button:hover {
+    background-color: #8b959f;
+  }
+  
+  .Ainventory .filters button:last-of-type {
+    background-color: #000000;
+  }
+  
+  .Ainventory .filters button:last-of-type:hover {
+    background-color: #562929;
+  }
+  

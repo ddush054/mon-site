@@ -1,19 +1,29 @@
 import React from "react";
+import { Container } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import ChatBot from "react-simple-chatbot";
+import { ThemeProvider } from "styled-components";
 import "./About.css";
 import Navbar from "./Navbar";
 
-// const containerStyle = {
-//   width: "100%",
-//   height: "400px",
-// };
-
-// const center = {
-//   lat: 45.4215,
-//   lng: -75.6972,
-// };
-
 const About = () => {
+  const [t, i18n] = useTranslation("global");
+
+  const handleChangeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
+  const theme = {
+    background: "#f5f8fb",
+    fontFamily: "Helvetica Neue",
+    headerBgColor: "#c7c7c7ac",
+    headerFontColor: "#fff",
+    headerFontSize: "15px",
+    botBubbleColor: "#c7c7c7ac",
+    botFontColor: "#fff",
+    userBubbleColor: "#fff",
+    userFontColor: "#4a4a4a",
+  };
   const steps = [
     { id: "1", message: "What is your name?", trigger: "2" },
     { id: "2", user: true, trigger: "3" },
@@ -71,7 +81,7 @@ const About = () => {
     },
   ];
   return (
-    <div className="App">
+    <div className="Abooking">
       <Navbar></Navbar>
       <main>
         <div className="map-selection">
@@ -93,17 +103,9 @@ const About = () => {
         <div className="content">
           <div className="description">
             <h2>HOMEFINDER</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <p>{t("about.Text")}</p>
           </div>
-          <div className="chart">
+          {/* <div className="chart">
             <h3>
               <strong>Median Price of Existing Home Sales</strong>
             </h3>
@@ -111,27 +113,43 @@ const About = () => {
               src="img/Graph.png"
               alt="Median Price of Existing Home Sales"
             />
-          </div>
+          </div> */}
+          <Container>
+            <div class="embed-responsive-item">
+              <iframe
+                className="embed-responsive-item"
+                src="https://www.youtube.com/embed/zsZv3thbl1w?si=q3gq-Nxged9zcPQF"
+                title="video"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </Container>
         </div>
         <footer>
           <div className="hours">
-            <h4>HORAIRES D'OUVERTURE :</h4>
-            <p>Lundi : 10:00 AM - 6:30 PM</p>
-            <p>Mardi : 10:00 AM - 6:30 PM</p>
-            <p>Mercredi : 10:00 AM - 6:30 PM</p>
-            <p>Jeudi : 10:00 AM - 6:30 PM</p>
-            <p>Vendredi : 10:00 AM - 6:30 PM</p>
-            <p>Samedi : 10:00 AM - 6:30 PM</p>
-            <p>Dimanche : Fermé</p>
+            <h4>{t("footer.HORAIRES D'OUVERTURE")}</h4>
+            <p>{t("footer.LUNDI-SAMEDI")}</p>
+            <p>{t("footer.DIMANCHE")}</p>
           </div>
           <div className="contact">
-            <h4>NOUS JOINDRE :</h4>
-            <p>Adresse : 75 Laurier Ave E, Ottawa, ON K1N 6N5</p>
-            <p>Téléphone : (613) 562-5700</p>
+            <h4>{t("footer.NOUS JOINDRE")}</h4>
+            <p>
+              <i className="bi bi-geo-alt-fill"></i> {t("footer.ADRESSE")}
+            </p>
+            <p>
+              <i className="bi bi-telephone-fill"></i> {t("footer.TÉLÉPHONE")}
+            </p>
           </div>
         </footer>
       </main>
-      <ChatBot steps={steps} floating={true} botDelay={1000} />
+      <ThemeProvider theme={theme}>
+        <ChatBot
+          steps={steps}
+          floating={true}
+          botDelay={1000}
+          key={new Date()}
+        />
+      </ThemeProvider>
     </div>
   );
 };
